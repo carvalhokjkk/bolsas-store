@@ -14,7 +14,7 @@
 }
 
 #modais .modal {
-    position: absolute;
+    position: fixed; 
     width: 75%;
     height: 100%;
     background-color: var(--background-primary);
