@@ -1,0 +1,19 @@
+#sections {
+    height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+#sections .sections-box{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sections .sections-box .section-item{
+    display: flex;
+    width: 62px;
+    height: 62px;
+    background-color: var(--background-secondary);
+    border-radius: 100%;
+}

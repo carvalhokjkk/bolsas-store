@@ -6,6 +6,9 @@
         <title>Document</title>
         <link rel="stylesheet" href="css/geral.css">
         <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/banner.css">
+        <link rel="stylesheet" href="css/sections.css">
+        <link rel="stylesheet" href="css/catalogo.css">
         <link rel="stylesheet" href="css/modais.css">
         <link rel="stylesheet" href="css/fonts.css">
     </head>
@@ -28,10 +31,42 @@
                     </div>
                 </div>
             </header>
+            <section id="banner">
+                <div class="banner">
+                </div>
+            </section>
+            <section id="sections">
+                <div class="sections-box">
+                    <div class="section-item">
+                        <a href="#"></a>
+                    </div>
+                    <div class="section-item">
+                        <a href="#"></a>
+                    </div>
+                    <div class="section-item">
+                        <a href="#"></a>
+                    </div>
+                    <div class="section-item">
+                        <a href="#"></a>
+                    </div>
+                    <div class="section-item">
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </section>
+            <section id="catalogo">
+                <div class="filters-row">
+                    <span class="filter-orientation">Todos os produtos</span>
+                    <div class="filtros-button">
+                        <span>Filtros</span>
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"/></svg>
+                    </div>
+                </div>
+            </section>
 
 
-            <div id="modais" class="active" onclick="swap_modal()">
-                <div id="mobile-menu" class="active modal left" onclick="event.stopPropagation()">
+            <div id="modais" class="" onclick="swap_modal()">
+                <div id="mobile-menu" class="modal left" onclick="event.stopPropagation()">
                     <div class="modal-header">
                         <div class="exit-button" onclick="swap_modal()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
