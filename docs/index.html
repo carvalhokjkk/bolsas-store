@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/geral.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/modais.css">
+        <link rel="stylesheet" href="css/fonts.css">
     </head>
     <body>
 
@@ -29,11 +30,38 @@
             </header>
 
 
-            <div id="modais" class="" onclick="swap_modal()">
-                <div id="mobile-menu" class="modal left" onclick="event.stopPropagation()">
+            <div id="modais" class="active" onclick="swap_modal()">
+                <div id="mobile-menu" class="active modal left" onclick="event.stopPropagation()">
                     <div class="modal-header">
                         <div class="exit-button" onclick="swap_modal()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+                        </div>
+                    </div>
+                    <div class="modal-content">
+                        <div class="section-list">
+                            <div class="section-item">
+                                <span>Nome</span>
+                            </div>
+                            <div class="section-item multi" onclick="swap_class(this, 'open')">
+                                <div class="group"> 
+                                    <span>Nome</span>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+                                </div>
+                                <div class="multilist" onclick="event.stopPropagation()">
+                                    <div class="section-item">
+                                        <span>item1</span>
+                                    </div>
+                                    <div class="section-item">
+                                        <span>item2</span>
+                                    </div>
+                                    <div class="section-item">
+                                        <span>item3</span>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="section-item">
+                                <span>Nome</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -43,6 +71,7 @@
         
     </body>
 
+    <script src="js/geral.js"></script>
     <script src="js/modais.js"></script>
 
 </html>
