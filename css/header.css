@@ -1,0 +1,37 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    position: relative;
+    --icon-size: 26px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.288);
+}
+
+
+#header .button-group {
+    display: flex;
+    gap: 7px;
+}
+
+#header .header-button {
+    display: flex;
+}
+
+#header .header-button svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    color: var(--secondary);
+}
+#header .header-button.logo > .logo{
+    position: absolute;
+    left: 50%;
+    background-color: var(--background-secondary);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    border-radius: 100%;
+    transform: translateX(-50%);
+}
+
+#header .header-button svg path{
+    stroke-width: 1.5;
+}
