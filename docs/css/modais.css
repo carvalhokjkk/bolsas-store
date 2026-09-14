@@ -2,6 +2,7 @@
     inset: 0;
     width: 100%;
     height: 100vh;
+    max-height: 100vh;
     background-color: rgba(0, 0, 0, 0.17);
     position: fixed;
     opacity: 0;
@@ -15,10 +16,11 @@
 }
 
 #modais .modal {
-    position: fixed; 
+    position: fixed;
     width: 75%;
     height: 100%;
     background-color: var(--background-primary);
+    max-height: 100vh;
     transition: left 0.4s ease, right 0.4s ease;
     gap: 20px;
     display: flex;
@@ -53,12 +55,12 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 
 #modais .modal .modal-header .exit-button svg {
-    height: 27px;
     width: 27px;
+    height: 27px;
 }
 
 .modal-content {
@@ -70,50 +72,51 @@
     padding-bottom: 60px;
 }
 
-.modal-content .section-list .section-item{
-    display: flex;
-    padding: 10px 0px;
-}
-.modal-content .section-list .section-item{
+.modal-content .section-list .section-item {
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
 }
 
-
-.modal-content .section-list .section-item.multi{
+.modal-content .section-list .section-item.multi {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-
-.modal-content .section-list .section-item .group{
-    width: 100%;
+.modal .modal-section .title-group {
     display: flex;
+    width: 100%;
     justify-content: space-between;
 }
-.modal-content .section-list .section-item.multi .group svg{
+
+.modal-content .section-list .section-item .group {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.modal-content .section-list .section-item.multi .group svg {
     width: 17px;
     height: 17px;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
 }
-.modal-content .section-list .section-item.multi.open .group svg{
+
+.modal-content .section-list .section-item.multi.open .group svg {
     transform: rotate(180deg);
 }
 
-.modal-content .section-list .section-item .multilist{
+.modal-content .section-list .section-item .multilist {
     display: none;
 }
 
-.modal-content .section-list .section-item.multi.open .multilist{
+.modal-content .section-list .section-item.multi.open .multilist {
     display: flex;
     flex-direction: column;
     width: 85%;
     gap: 10px;
 }
-
-
 
 .modal-section {
     display: flex;
@@ -129,17 +132,145 @@
     gap: 20px;
 }
 
-
-
 #filtros .input-group {
     display: flex;
     width: 100%;
     gap: 10px;
 }
 
-#filtros .input-group > div{
+#filtros .input-group > div {
     display: flex;
     flex-direction: column;
     width: 40%;
     gap: 5px;
+}
+
+#carrinho {
+    position: relative;
+}
+
+#carrinho .modal-content {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#carrinho .modal-content > .modal-section:last-child {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#carrinho .items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-bottom: 140px;
+}
+
+#carrinho .items-container::-webkit-scrollbar {
+    display: none;
+}
+.carrinho-item-card {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.carrinho-item-card .produto-foto {
+    display: flex;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background-color: var(--background-secondary);
+    background: radial-gradient(circle at 50% 0%, var(--background-secondary) 70%, #0000005d 100%);
+}
+
+.carrinho-item-card .content {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carrinho-item-card .content .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.carrinho-item-card .content .info .produto-nome{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.carrinho-item-card .content .info .info-adicional{
+    font-size: 10px;
+}
+
+.carrinho-item-card .content .info > div{
+    display: flex;
+    flex-direction: column;
+}
+.carrinho-item-card .content .info .delete-btn{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40px;
+    height: 16px;
+}
+.carrinho-item-card .content .info .delete-btn svg{
+    width: 16px;
+    height: 16px;
+}
+
+.carrinho-item-card .content .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.carrinho-item-card .content .price .qnt-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+}
+
+.carrinho-item-card .content .price > .value {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#carrinho .modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+#carrinho .modal-footer .total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+}
+#carrinho .modal-footer > button {
+    width: 75%;
+
+}
+
+.modal-footer {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-top: 1px solid var(--background-secondary);
+    background-color: var(--background-primary);
 }

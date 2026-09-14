@@ -18,3 +18,16 @@ function checkBoxInput(checkbox) {
     var input = checkbox.querySelector(':scope > input')
     input.value = input.value == 'true' ? 'false' : 'true'
 }
+
+
+
+function qnt_button_pressed(button, add) {
+    var button = button.parentNode
+    var input = button.querySelector(':scope > input')
+
+    var value = Number(input.value) + (add ? 1 : -1)
+    if (value >= 1) {
+        input.value = value
+    }
+    button.querySelector('.value').innerHTML = input.value
+}

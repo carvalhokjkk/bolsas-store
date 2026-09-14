@@ -102,3 +102,39 @@ input[type='text'], input[type='number'], input[type='email'], input[type='passw
     outline: 1px solid var(--primary);
     padding: 7px 5px
 }
+
+.qnt-button {
+    display: flex;
+    border: 1px solid var(--primary);
+    height: 30px;
+    align-items: center;
+
+}
+
+.qnt-button span {
+    display: flex;
+    height: 100%;
+    padding: 0 10px;
+    align-items: center;
+    font-weight: 300;
+
+}
+
+.qnt-button span.btn{
+    font-weight: normal;
+}
+
+button {
+    all: unset;
+    background-color: var(--background-primary);
+    border: 1px solid var(--primary);
+    width: 90%;
+    padding: 8px 3%;
+    text-align: center;
+    color: var(--primary);
+    font-weight: 500;
+}
+button.dark {
+    background-color: var(--primary);
+    color: var(--background-primary);
+}
