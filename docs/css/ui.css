@@ -1,0 +1,104 @@
+.selector {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1px;
+    position: relative;
+}
+
+.selector .box {
+    display: flex;
+    width: 183px;
+    height: 32px;
+    align-items: center;
+    outline: 1px solid var(--primary);
+    border-collapse: collapse;
+    justify-content: space-between;
+    padding-right: 7px;
+}
+.selector .box span{
+    padding-left: 7px;
+}
+.selector .box svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    transition: transform 0.2s ease;
+}
+
+.selector.open .box svg{
+    transform: rotateZ(180deg);
+}
+
+.selector .selector-options {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 33px;
+    flex-direction: column;
+    max-width: 190px;
+    outline: 1px solid var(--primary);
+    border-collapse: collapse;
+}
+.selector.open .selector-options {
+    display: flex;
+}
+
+.selector .selector-options span{
+    padding: 5px 7px;
+}
+
+.selector .selector-options .options-item{
+    border-bottom: 1px solid var(--primary);
+    border-collapse: collapse;
+    background-color: var(--background-primary);
+}
+
+.selector .selector-options .options-item.selected, .selector .selector-options .options-item:active{
+    background-color: var(--background-secondary);
+}
+
+.selector .selector-options .options-item:last-child{
+    border-bottom: 0px solid var(--primary);
+    border-collapse: collapse;
+}
+
+
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checkbox .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid var(--primary);
+    border-radius: 5px;
+    width: 16px;
+    height: 16px;
+}
+.checkbox .box svg{
+    width: 0px;
+    height: 0px;
+    transition: widith 0.2s ease, height 0.2s ease;
+}
+.checkbox.checked .box svg{
+    width: 14px;
+    height: 14px;
+}
+
+.checkbox-list {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+
+input[type='text'], input[type='number'], input[type='email'], input[type='password'], input[type='tel'], input[type='search'], input[type='url']{
+    background-color: var(--background-primary);
+    border: none;
+    outline: 1px solid var(--primary);
+    padding: 7px 5px
+}

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="css/geral.css">
+        <link rel="stylesheet" href="css/ui.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/banner.css">
         <link rel="stylesheet" href="css/sections.css">
@@ -26,7 +27,7 @@
                     <div class="header-button">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
                     </div>
-                    <div class="header-button">
+                    <div class="header-button" onclick="swap_modal('carrinho');">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/></svg>
                     </div>
                 </div>
@@ -81,7 +82,7 @@
             <section id="catalogo">
                 <div class="filters-row">
                     <span class="filter-orientation">Todos os produtos</span>
-                    <div class="filtros-button">
+                    <div class="filtros-button" onclick="swap_modal('filtros')">
                         <span>Filtros</span>
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"/></svg>
                     </div>
@@ -153,7 +154,7 @@
                         </div>
                     </div>
                     <div class="modal-content">
-                        <div class="section-list">
+                        <div class="section-list modal-section">
                             <div class="section-item">
                                 <span>Nome</span>
                             </div>
@@ -180,13 +181,98 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <div id="carrinho" class="modal right" onclick="event.stopPropagation()">
+                    <div class="modal-header">
+                        <div class="exit-button" onclick="swap_modal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div id="filtros" class="modal right" onclick="event.stopPropagation()">
+                    <div class="modal-header">
+                        <div class="exit-button" onclick="swap_modal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+                        </div>
+                    </div>
 
+                    <div class="modal-content">
+                        <div class="modal-section orderby">
+                            <span>Ordenar por:</span>
+                            <div class="selector" onclick="swap_class(this, 'open')">
+                                <input type="hidden" value="op1" class="filtro-orderby">
+                                <div class="box">
+                                    <span>op1</span>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+                                </div>
+                                <div class="selector-options">
+                                    <span class="options-item selected" onclick="selecionar_item(this)">op1</span>
+                                    <span class="options-item" onclick="selecionar_item(this)">op2</span>
+                                    <span class="options-item" onclick="selecionar_item(this)">op3</span>
+                                    <span class="options-item" onclick="selecionar_item(this)">op4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-content">
+                        <div class="modal-section modelo">
+                            <span>Modelo</span>
+                            <div class="checkbox-list">
+                                <div class="checkbox" onclick="swap_class(this, 'checked'); checkBoxInput(this);">
+                                    <input type="hidden" value="false" class="">
+                                    <div class="box">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/></svg>
+                                    </div>
+                                    <span class="text">Modelo 1</span>
+                                </div>
+                                <div class="checkbox" onclick="swap_class(this, 'checked'); checkBoxInput(this);">
+                                    <input type="hidden" value="false" class="">
+                                    <div class="box">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/></svg>
+                                    </div>
+                                    <span class="text">Modelo 2</span>
+                                </div>
+                                <div class="checkbox" onclick="swap_class(this, 'checked'); checkBoxInput(this);">
+                                    <input type="hidden" value="false" class="">
+                                    <div class="box">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/></svg>
+                                    </div>
+                                    <span class="text">Modelo 3</span>
+                                </div>
+                                <div class="checkbox" onclick="swap_class(this, 'checked'); checkBoxInput(this);">
+                                    <input type="hidden" value="false" class="">
+                                    <div class="box">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/></svg>
+                                    </div>
+                                    <span class="text">Modelo 4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-content">
+                        <div class="modal-section modelo">
+                            <span>Preço</span>
+                            <div class="input-group">
+                                <div>
+                                    <label>De</label>
+                                    <input type="number" name="" id="" placeholder="R$ 0,00">
+                                </div>
+                                <div>
+                                    <label>Até</label>
+                                    <input type="number" name="" id="" placeholder="R$ 0,00">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
         
     </body>
 
     <script src="js/geral.js"></script>
+    <script src="js/ui.js"></script>
     <script src="js/modais.js"></script>
 
 </html>
