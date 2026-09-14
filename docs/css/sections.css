@@ -1,14 +1,23 @@
 #sections {
+    display: flex;
     height: 100px;
     width: 100%;
-    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
 
-#sections .sections-box{
+#sections::-webkit-scrollbar {
+    display: none;
+}
+
+#sections .sections-box {
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
     align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+    width: max-content;
+    min-width: 100%;
+    box-sizing: border-box;
 }
 #sections .sections-box .section-item{
     display: flex;
@@ -17,3 +26,4 @@
     background-color: var(--background-secondary);
     border-radius: 100%;
 }
+

@@ -23,8 +23,8 @@
     position: absolute;
     left: 50%;
     background-color: var(--background-secondary);
-    width: var(--icon-size);
-    height: var(--icon-size);
+    width: 38px;
+    height: 38px;
     border-radius: 100%;
     transform: translate(-50%, -50%);
 }
