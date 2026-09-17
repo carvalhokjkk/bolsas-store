@@ -7,12 +7,11 @@ function add_event_listner() {
 }
 
 function open_page(element) {
-    // window.location.href = '../docs/pages/produtct_page.html'
-    window.location.href = './pages/produtct_page.html'
+    window.location.href = '../bolsas-store/docs/pages/produtct_page.html'
 }
 
 function back_menu(){
-    window.location.href = '../index.html'
+    window.location.href = '../'
 }
 
 add_event_listner()
