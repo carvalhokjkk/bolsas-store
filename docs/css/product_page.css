@@ -1,0 +1,141 @@
+#produto-page-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.product-image {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 428px;
+    background-color: rgba(0, 0, 0, 0.116);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 2.5%;
+    width: 100%;
+
+}
+
+.dots .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #6d6d6d;
+    border-radius: 100%;
+}
+.dots .dot.active {
+    background-color: rgb(43, 43, 43);
+}
+
+.product-section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 7px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--background-secondary);
+}
+
+.product-section.empty {
+    height: 100px;
+}
+
+.product-section .product-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.product-section .product-info .name {
+    font-size: 26px;
+    font-weight: 250;
+}
+
+.product-section .product-info .info {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+.product-price {
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.product-price .price {
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 1px;
+
+}
+
+.product-price .parcelas{
+    font-size: 14px;
+    opacity: 0.48;
+}
+
+.produtos-cores {
+    margin-top: 10px;
+    display: flex;
+    gap: 7px;
+}
+.produtos-cores .cor-opt {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(-45deg, black 50%, grey 50%);
+    border-radius: 100%;
+    position: relative;
+}
+
+.product-section .section-name {
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 0px;
+}
+.product-section .section-texto {
+    width: 75%;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#buy-button {
+    position: fixed;
+    width: 100%;
+    background-color: var(--background-primary);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
+    gap: 10px;
+    border-top: 1px solid var(--background-secondary);
+    bottom: 0;
+}
+
+#buy-button > div {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+#buy-button button {
+    height: 28px;
+    font-size: 18px;
+}
+#buy-button > div > a {
+    font-size: 14px;
+    color: var(--primary);
+}

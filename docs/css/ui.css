@@ -117,11 +117,15 @@ input[type='text'], input[type='number'], input[type='email'], input[type='passw
     padding: 0 10px;
     align-items: center;
     font-weight: 300;
-
 }
+
 
 .qnt-button span.btn{
     font-weight: normal;
+}
+.qnt-button span.value{
+    width: 14px;
+    justify-content: center;
 }
 
 button {

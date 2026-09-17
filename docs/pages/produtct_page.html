@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-    <html lang="en">
+    <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="css/geral.css">
-        <link rel="stylesheet" href="css/ui.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/banner.css">
-        <link rel="stylesheet" href="css/sections.css">
-        <link rel="stylesheet" href="css/catalogo.css">
-        <link rel="stylesheet" href="css/modais.css">
-        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="../css/geral.css">
+        <link rel="stylesheet" href="../css/ui.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/banner.css">
+        <link rel="stylesheet" href="../css/sections.css">
+        <link rel="stylesheet" href="../css/catalogo.css">
+        <link rel="stylesheet" href="../css/modais.css">
+        <link rel="stylesheet" href="../css/fonts.css">
+
+        <link rel="stylesheet" href="../css/product_page.css">
+
     </head>
     <body>
-
         <div id="main">
             <header id="header">
-                <div class="header-button" onclick="swap_modal('mobile-menu')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>
+                <div class="header-button" onclick="back_menu()">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/></svg>
                 </div>
-                <div class="header-button logo">
+                <div class="header-button logo" onclick="">
                     <div class="logo"></div>
                 </div>
                 <div class="button-group">
@@ -32,121 +34,59 @@
                     </div>
                 </div>
             </header>
-            
-            <section id="banner">
-                <div class="banner">
-                </div>
-            </section>
-            <section id="sections">
-                <div class="sections-box">
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
-                    </div>
-                    <div class="section-item">
-                        <a href="#"></a>
+
+            <div id="produto-page-main-container">
+                <div class="product-image">
+                    <div class="image"></div>
+                    <div class="dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
                     </div>
                 </div>
-            </section>
-            <section id="catalogo">
-                <div class="filters-row">
-                    <span class="filter-orientation">Todos os produtos</span>
-                    <div class="filtros-button" onclick="swap_modal('filtros')">
-                        <span>Filtros</span>
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"/></svg>
+                <div class="product-section">
+                    <div class="product-info">
+                        <span class="name">Nome do produto curto</span>
+                        <span class="info">info-product</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">R$ 0,00</span>
+                        <span class="parcelas">12x de R$ 0,00 sem juros</span>
+                    </div>
+                    <div class="produtos-cores">
+                        <div class="cor-opt"></div>
+                        <div class="cor-opt"></div>
+                        <div class="cor-opt"></div>
                     </div>
                 </div>
-                <div class="products-container">
-                    <div class="product-card">
-                        <div class="image">
-                        </div>
-                        <div class="info">
-                            <div class="nome"><span>Título do produto</span></div>
-                            <div class="material"><span>Material - detalhamento</span></div>
-                            <div class="valor"><span>R$ 0,00</span></div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="image">
-                        </div>
-                        <div class="info">
-                            <div class="nome"><span>Título do produto</span></div>
-                            <div class="material"><span>Material - detalhamento</span></div>
-                            <div class="valor"><span>R$ 0,00</span></div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="image">
-                        </div>
-                        <div class="info">
-                            <div class="nome"><span>Título do produto</span></div>
-                            <div class="material"><span>Material - detalhamento</span></div>
-                            <div class="valor"><span>R$ 0,00</span></div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="image">
-                        </div>
-                        <div class="info">
-                            <div class="nome"><span>Título do produto</span></div>
-                            <div class="material"><span>Material - detalhamento</span></div>
-                            <div class="valor"><span>R$ 0,00</span></div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="image">
-                        </div>
-                        <div class="info">
-                            <div class="nome"><span>Título do produto</span></div>
-                            <div class="material"><span>Material - detalhamento</span></div>
-                            <div class="valor"><span>R$ 0,00</span></div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="image">
-                        </div>
-                        <div class="info">
-                            <div class="nome"><span>Título do produto</span></div>
-                            <div class="material"><span>Material - detalhamento</span></div>
-                            <div class="valor"><span>R$ 0,00</span></div>
-                        </div>
+                <div class="product-section">
+                    <span class="section-name">Descrição:</span>
+                    <div class="section-texto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, minus. Voluptate est dolorem delectus deleniti tempore reiciendis architecto libero nobis, voluptatem veniam modi, illo, impedit voluptas qui. Amet, provident! Unde?
                     </div>
                 </div>
-            </section>
+                <div class="product-section">
+                    <span class="section-name">Informações:</span>
+                    <div class="section-texto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, minus. Voluptate est dolorem delectus deleniti tempore reiciendis architecto libero nobis, voluptatem veniam modi, illo, impedit voluptas qui. Amet, provident! Unde?
+                    </div>
+                </div>
+                <div class="product-section empty">
+
+                </div>
+            </div>
+            <div id="buy-button">
+                <div>
+                    <button class="dark">Adicionar ao carrinho</button>
+                    <a href="#">Comprar pelo WhatsApp</a>
+                </div>
+            </div>
         </div>
         
+
+
+
+
         <div id="modais" class="" onclick="swap_modal()">
             <div id="mobile-menu" class="modal left" onclick="event.stopPropagation()">
                 <div class="modal-header">
@@ -318,9 +258,10 @@
         </div>        
     </body>
 
-    <script src="js/products.js"></script>
-    <script src="js/geral.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/modais.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/geral.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/modais.js"></script>
+
 
 </html>

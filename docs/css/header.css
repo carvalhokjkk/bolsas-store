@@ -8,6 +8,7 @@
     padding: 0px 15px;
     top: 0;
     background-color: var(--background-primary);
+    z-index: 1; 
 }
 
 #header .button-group {
@@ -28,5 +29,3 @@
     border-radius: 100%;
     transform: translate(-50%, -50%);
 }
-
-
