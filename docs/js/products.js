@@ -7,11 +7,12 @@ function add_event_listner() {
 }
 
 function open_page(element) {
-    window.location.href = '../docs/pages/produtct_page.html'
+    // window.location.href = '../docs/pages/produtct_page.html'
+    window.location.href = './pages/produtct_page.html'
 }
 
 function back_menu(){
-    window.location.href = '../'
+    window.location.href = '../index.html'
 }
 
 add_event_listner()
